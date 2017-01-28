@@ -18,9 +18,11 @@ $(function(){
     $(".btn-start").click(function(){
 
   		if (clicks) {
-  		   /* first remove the button */
+
+  		   /* first hide and disable the button */
 			$(".btn-start").animate({opacity:0}, (delay*200),function(){
-			    $(this).animate({opacity:0});
+				console.log('test');
+			    $(this).animate({opacity:0}).prop("disabled", true);
 			})
 	
 			/* iterate through the items array to display the whole story */
@@ -42,7 +44,9 @@ $(function(){
 			        $text.fadeIn();
 			        $text.queue(function(){
 			            if (i == items.length -1) {
-			            	$(".btn-start").animate({opacity:1}, 1500).find("h2").text("Browse dancing portfolio")
+			            	$(".btn-start").removeAttr("disabled");  
+			            	$(".btn-start").animate({opacity:1}, 1500).find("h2")
+			            	.text("Browse dancing portfolio")
 			            }
 			            $text.dequeue();
 			        });
@@ -58,5 +62,7 @@ $(function(){
   		clicks = !clicks;
 
     });
+
+
 
 });
