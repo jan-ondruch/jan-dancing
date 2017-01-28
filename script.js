@@ -20,6 +20,10 @@ $(function(){
 	],
         $text = $('.intro-container h1'),
         delay = 3;
+
+    // slowly animate the very intro
+    $(".intro-container").hide();
+    $(".intro-container").fadeIn(1.5*1E3);
     
     $(".btn-start").click(function(){
 
