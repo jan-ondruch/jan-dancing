@@ -35,3 +35,22 @@ button * {
 	align-items: center;
 	justify-content: center;
 }
+
+.skip a {
+	color: #ddd;
+	text-decoration: none;
+	opacity: 0.5;
+	text-align: center;
+	top: 90vh;
+	width: 100%;
+	display: block;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	outline: 0;
+}
+
+.skip a:hover {
+	color: #fff;
+	opacity: 0.8;
+}

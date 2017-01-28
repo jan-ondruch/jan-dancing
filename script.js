@@ -1,6 +1,12 @@
 /* the initial $(function(){} prevents jQuery code running before the whole document is loaded */
 $(function(){
 
+	// remove bug
+	$(".btn-start").removeAttr("disabled");
+
+	// hide "skip" link
+	$(".skip").hide();
+
 	var clicks = true;
 
 	var items = [
@@ -13,7 +19,7 @@ $(function(){
 		"Wanna have a look where it got me?"
 	],
         $text = $('.intro-container h1'),
-        delay = 1;
+        delay = 3;
     
     $(".btn-start").click(function(){
 
@@ -21,10 +27,12 @@ $(function(){
 
   		   /* first hide and disable the button */
 			$(".btn-start").animate({opacity:0}, (delay*200),function(){
-				console.log('test');
 			    $(this).animate({opacity:0}).prop("disabled", true);
 			})
 	
+			/* show "skip" link */
+			$(".skip").delay(delay*1E3).fadeIn();
+
 			/* iterate through the items array to display the whole story */
 			function loop(delay) {
 			    $.each(items, function (i, elm) {
