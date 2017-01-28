@@ -52,9 +52,11 @@ $(function(){
 			        $text.fadeIn();
 			        $text.queue(function(){
 			            if (i == items.length -1) {
+			            	/* show button again and hide "skip" link */
 			            	$(".btn-start").removeAttr("disabled");  
 			            	$(".btn-start").animate({opacity:1}, 1500).find("h2")
 			            	.text("Browse dancing portfolio")
+			            	$(".skip").fadeOut();
 			            }
 			            $text.dequeue();
 			        });
@@ -65,6 +67,7 @@ $(function(){
 
   		} else {
   		   window.location = "./portfolio.html" + this.id;
+  		   clicks = true;	// to avoid going back to story when we go page back
   		}
   		// switch for the second click
   		clicks = !clicks;
