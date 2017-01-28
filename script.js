@@ -16,7 +16,7 @@ $(function(){
 		"It was weird, but amazingly weird. I loved it.",
 		"It felt like I found a missing piece of myself.",
 		"Emotions, compassion, happiness ...",
-		"Wanna have a look where it got me?"
+		"Wanna have a look where it has got me since then?"
 	],
         $text = $('.intro-container h1'),
         delay = 3;
