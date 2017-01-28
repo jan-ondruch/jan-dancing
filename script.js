@@ -1,19 +1,17 @@
-var story = [
-	"It all started in the year of 2012.",
-	"Yeah, it was amazing!",
-	"Really, it was...",
-];
-
 /* the initial $(function(){} prevents jQuery code running before the whole document is loaded */
 $(function(){
 
 	var items = [
-		"It all started in the year of 2012.",
-		"Yeah, it was amazing!",
-		"Really, it was...",
+		"It all started in the summer of 2012 in Berlin.",
+		"As a kinda joke I tried my first dancing workshop.",
+		"It was a contemporary dance.",
+		"It was weird, but amazingly weird. I loved it.",
+		"It felt like I found a missing piece of myself.",
+		"Emotions, compassion, happiness ...",
+		"Wanna have a look where it got me?"
 	],
         $text = $('.intro-container h1'),
-        delay = 3;
+        delay = 1;
     
     $(".btn-start").click(function(){
 
@@ -41,7 +39,7 @@ $(function(){
 		        $text.fadeIn();
 		        $text.queue(function(){
 		            if (i == items.length -1) {
-		                // cut the loop!  
+		            	$(".btn-start").animate({opacity:1}, 1500).find("h2").text("Browse dancing portfolio")
 		            }
 		            $text.dequeue();
 		        });
