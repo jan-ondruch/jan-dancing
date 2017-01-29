@@ -6,6 +6,67 @@ body {
 	background-image: url("images/image02.jpg");
 }
 
+/* mobile-first */
+
+.intro-container {
+	color: #fff;
+	top: 12vh;
+	position: relative;
+	text-align: center;
+	font-size: 0.8em;
+	margin-left: 4vw;
+	margin-right: 4vw;
+}
+
+
+button {
+	color: #212121;
+	background-color: #ff5722;
+	text-transform: uppercase;
+	border-radius: 4px;
+	margin-top: 4vh;
+	border-color: #ff5722;
+	border-style: none;
+	transition: background-color 0.5s ease;
+}
+
+button:hover {
+	background-color: #ffc107;
+}
+
+button * {
+	margin: 8px;
+}
+
+.skip a {
+	color: #ddd;
+	text-decoration: none;
+	opacity: 0.5;
+	text-align: center;
+	top: 90vh;
+	width: 100%;
+	display: block;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	outline: 0;
+}
+
+.skip a:hover {
+	color: #fff;
+	opacity: 0.8;
+}
+
+/*
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background-image: url("images/image02.jpg");
+}
+
 button {
 	color: #212121;
 	background-color: #ff5722;
@@ -54,3 +115,5 @@ button * {
 	color: #fff;
 	opacity: 0.8;
 }
+
+*/

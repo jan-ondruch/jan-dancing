@@ -21,6 +21,7 @@ $(function(){
         $text = $('.intro-container h1'),
         delay = 3;
 
+
     // slowly animate the very intro
     $(".intro-container").hide();
     $(".intro-container").fadeIn(1.5*1E3);
@@ -41,22 +42,31 @@ $(function(){
 			function loop(delay) {
 			    $.each(items, function (i, elm) {
 			    	// sync the first transition with the button
+			    	// use callback function to center the story text
 			    	if (i == 0) {
-			    		$text.delay(delay*50).fadeOut();
+			    		$text.delay(delay*50).fadeOut(function() {
+			    			$(".intro-container").css("top", "30vh");
+			    		});
 			    	}	
 			    	else {
 			    		$text.delay(delay*1E3).fadeOut();	//1E3 == 1000
 			    	}
-			        
+			    
 			     	$text.delay(delay*400)	// delay transition between texts
 			        $text.queue(function(){
 			            $text.html(items[i]);
 			            $text.dequeue();
 			        });
-			        $text.fadeIn();
+
+			        if (i !== items.length -1) {
+			        	$text.fadeIn();
+			        }
+			        
 			        $text.queue(function(){
 			            if (i == items.length -1) {
 			            	/* show button again and hide "skip" link */
+			            	$(".intro-container").css("top", "20%").css("position", "absolute");
+			            	$text.fadeIn(1500);
 			            	$(".btn-start").removeAttr("disabled");  
 			            	$(".btn-start").animate({opacity:1}, 1500).find("h2")
 			            	.text("Browse dancing portfolio")
