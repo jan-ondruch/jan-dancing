@@ -3,7 +3,11 @@
 function checkMedia() {
     if (window.matchMedia('(min-width: 767px)').matches) {
         return [30, 26];
-    } else {
+    } 
+    else if (window.matchMedia('(min-width: 1280px)').matches) {
+    	return [40, 34];
+    }
+    else {
         return [30, 20];	// for mobile devices
     }
 }
