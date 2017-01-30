@@ -1,12 +1,12 @@
 /* checks media size to set propper 'top' value */
 /* @return value: [top height when story is told, top height for the 'go to portfolio' btn] */
 function checkMedia() {
-    if (window.matchMedia('(min-width: 767px)').matches) {
-        return [30, 26];
-    } 
-    else if (window.matchMedia('(min-width: 1280px)').matches) {
+    if (window.matchMedia('(min-width: 1280px)').matches) {
     	return [40, 34];
     }
+    else if (window.matchMedia('(min-width: 767px)').matches) {
+        return [30, 26];
+    } 
     else {
         return [30, 20];	// for mobile devices
     }
