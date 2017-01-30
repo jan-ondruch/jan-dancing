@@ -1,26 +1,39 @@
+/* checks media size to set propper 'top' value */
+/* @return value: [top height when story is told, top height for the 'go to portfolio' btn] */
+function checkMedia() {
+    if (window.matchMedia('(min-width: 767px)').matches) {
+        return [30, 26];
+    } else {
+        return [30, 20];	// for mobile devices
+    }
+}
+
+
 /* the initial $(function(){} prevents jQuery code running before the whole document is loaded */
 $(function(){
-
-	// remove bug
-	$(".btn-start").removeAttr("disabled");
-
-	// hide "skip" link
-	$(".skip").hide();
 
 	var clicks = true;
 
 	var items = [
 		"It all started in the summer of 2012 in Berlin.",
-		"As a kinda joke I tried my first dancing workshop.",
+		/*"As a kinda joke I tried my first dancing workshop.",
 		"It was a contemporary dance.",
 		"It was weird, but amazingly weird. I loved it.",
-		"It felt like I found a missing piece of myself.",
+		"It felt like I found a missing piece of myself.",*/
 		"Emotions, compassion, happiness ...",
 		"Wanna have a look where it has got me since then?"
 	],
         $text = $('.intro-container h1'),
-        delay = 3;
+        delay = 0.1;
 
+    var top = checkMedia();	// 'top' position in CSS
+
+
+    // remove bug
+	$(".btn-start").removeAttr("disabled");
+
+	// hide "skip" link
+	$(".skip").hide();
 
     // slowly animate the very intro
     $(".intro-container").hide();
@@ -45,7 +58,7 @@ $(function(){
 			    	// use callback function to center the story text
 			    	if (i == 0) {
 			    		$text.delay(delay*50).fadeOut(function() {
-			    			$(".intro-container").css("top", "30vh");
+			    			$(".intro-container").css("top", top[0] + "vh");
 			    		});
 			    	}	
 			    	else {
@@ -65,7 +78,7 @@ $(function(){
 			        $text.queue(function(){
 			            if (i == items.length -1) {
 			            	/* show button again and hide "skip" link */
-			            	$(".intro-container").css("top", "20%").css("position", "absolute");
+			            	$(".intro-container").css("top", top[1] + "vh");
 			            	$text.fadeIn(1500);
 			            	$(".btn-start").removeAttr("disabled");  
 			            	$(".btn-start").animate({opacity:1}, 1500).find("h2")

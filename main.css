@@ -61,63 +61,21 @@ button * {
 	opacity: 0.8;
 }
 
-/*
 
-* {
-	font-family: 'Roboto', sans-serif;
+/* other media screens */
+
+@media screen and (min-width: 767px) {
+	.intro-container {
+		top: 26vh;
+		font-size: 1em;
+		margin-left: 8vw;
+		margin-right: 8vw;
+	}
 }
 
-body {
-	background-image: url("images/image02.jpg");
+@media screen and (min-width: 1280px) {
+	.intro-container {
+		margin-left: 16vw;
+		margin-right: 16vw;
+	}
 }
-
-button {
-	color: #212121;
-	background-color: #ff5722;
-	text-transform: uppercase;
-	border-radius: 4px;
-	margin-top: 2vh;
-	border-color: #ff5722;
-	border-style: none;
-	transition: background-color 0.5s ease;
-}
-
-button:hover {
-	background-color: #ffc107;
-}
-
-button * {
-	margin: 8px;
-}
-
-.intro-container {
-	color: #fff;
-	text-align: center;
-	top: 30vh;
-	width: 100%;
-	display: block;
-	position: fixed;
-	align-items: center;
-	justify-content: center;
-}
-
-.skip a {
-	color: #ddd;
-	text-decoration: none;
-	opacity: 0.5;
-	text-align: center;
-	top: 90vh;
-	width: 100%;
-	display: block;
-	position: fixed;
-	align-items: center;
-	justify-content: center;
-	outline: 0;
-}
-
-.skip a:hover {
-	color: #fff;
-	opacity: 0.8;
-}
-
-*/
