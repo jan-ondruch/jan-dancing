@@ -34,6 +34,10 @@ button:hover {
 	background-color: #ffc107;
 }
 
+button:active {
+	outline: none;
+}
+
 button * {
 	margin: 8px;
 }
