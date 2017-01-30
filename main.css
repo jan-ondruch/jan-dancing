@@ -109,14 +109,22 @@ button * {
 
 .header-dance {
 	position: relative;
-	height: 10em;
-	background-image: url("images/image01.jpg");
-	background-size: 100%;
+	height: 12em;
 	text-align: center;
+	display: flex;
 }
 
-.header-dance h2 {
-	padding-top: 2.5em;
+.header-dance img {
+	width: 100%;
+}
+
+.header-text {
+	position: absolute;
+    top: 2em;
+    font-size: 2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #box article {
