@@ -1,21 +1,25 @@
 * {
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
 }
 
 body {
 	background-image: url("images/image02.jpg");
+	color: #fff;
 }
 
 /* mobile-first */
 
+
+/* intro page */
+
 .intro-container {
-	color: #fff;
-	top: 12vh;
+	top: 16vh;
 	position: relative;
 	text-align: center;
 	font-size: 0.8em;
-	margin-left: 4vw;
-	margin-right: 4vw;
+	margin-left: 6vw;
+	margin-right: 6vw;
 }
 
 
@@ -66,17 +70,56 @@ button * {
 
 @media screen and (min-width: 767px) {
 	.intro-container {
-		top: 26vh;
+		top: 30vh;
 		font-size: 1em;
-		margin-left: 8vw;
-		margin-right: 8vw;
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
 }
 
 @media screen and (min-width: 1280px) {
 	.intro-container {
-		top: 30vh;
-		margin-left: 16vw;
-		margin-right: 16vw;
+		top: 34vh;
+		margin-left: 18vw;
+		margin-right: 18vw;
 	}
+}
+
+/* end of intro page */
+
+
+/* portfolio page */
+
+.header {
+	text-align: center;
+	margin: 4vh 2vh;
+}
+
+.header h1 {
+	padding-bottom: 2vh;
+}
+
+#box {
+	background-color: #000;
+	position: relative;
+	margin: 0 auto;
+	max-width: 320px;
+	margin-top: 2vh;
+}
+
+.header-dance {
+	position: relative;
+	height: 10em;
+	background-image: url("images/image01.jpg");
+	background-size: 100%;
+	text-align: center;
+}
+
+.header-dance h2 {
+	padding-top: 2.5em;
+}
+
+#box article {
+	padding: 1.5em;
+	text-align: justify;
 }

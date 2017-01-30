@@ -2,13 +2,13 @@
 /* @return value: [top height when story is told, top height for the 'go to portfolio' btn] */
 function checkMedia() {
     if (window.matchMedia('(min-width: 1280px)').matches) {
-    	return [40, 34];
+    	return [44, 38];
     }
     else if (window.matchMedia('(min-width: 767px)').matches) {
-        return [30, 26];
+        return [34, 30];
     } 
     else {
-        return [30, 20];	// for mobile devices
+        return [34, 24];	// for mobile devices
     }
 }
 
