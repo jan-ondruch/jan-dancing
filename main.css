@@ -92,7 +92,7 @@ button * {
 
 .header-dance {
 	position: relative;
-	height: 12em;
+	height: 11em;
 	text-align: center;
 	display: flex;
 }
@@ -107,7 +107,8 @@ button * {
     font-size: 2em;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 2.2em;
+    background: rgba(0,0,0,0.40);
 }
 
 #box article {
@@ -117,6 +118,7 @@ button * {
 
 footer {
 	text-align: center;
+	color: #f2f2f2;
 	font-size: 0.8em;
 	margin: 1em;
 	clear: both;
@@ -150,8 +152,9 @@ footer {
 	}
 
 	.header-text {
-		top: 2.2em;
+		top: 2em;
 		font-size: 4em;
+		bottom: 3.3em;
 	}
 }
 
