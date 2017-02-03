@@ -80,6 +80,10 @@ button * {
 	padding-bottom: 2vh;
 }
 
+.header span {
+	color: #d2d2d2;
+}
+
 #box {
 	background-color: #212121;
 	position: relative;
@@ -126,6 +130,23 @@ footer {
 
 
 /* other media screens */
+
+
+@media screen and (min-width: 414px) {
+	#box {
+		max-width: 400px;
+	}
+
+	.header-dance {
+		height: 15em;
+	}
+
+	.header-text {
+		top: 1.7em;
+		font-size: 3em;
+		bottom: 2em;
+	}
+}
 
 @media screen and (min-width: 767px) {
 	.intro-container {
