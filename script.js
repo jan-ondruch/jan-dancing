@@ -20,15 +20,15 @@ $(function(){
 
 	var items = [
 		"It all started in the summer of 2012 in Berlin.",
-		/*"As a kinda joke I tried my first dancing workshop.",
+		"As a kinda joke I tried my first dancing workshop.",
 		"It was a contemporary dance.",
 		"It was weird, but amazingly weird. I loved it.",
-		"It felt like I found a missing piece of myself.",*/
+		"It felt like I found a missing piece of myself.",
 		"Emotions, compassion, happiness ...",
 		"Wanna have a look where it has got me since then?"
 	],
         $text = $('.intro-container h1'),
-        delay = 0.1;
+        delay = 2;	// 0.1 for debug
 
     var top = checkMedia();	// 'top' position in CSS
 
