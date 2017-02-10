@@ -6,7 +6,7 @@ function checkMedia() {
     }
     else if (window.matchMedia('(min-width: 767px)').matches) {
         return [34, 30];
-    } 
+    }
     else {
         return [34, 24];	// for mobile devices
     }
@@ -105,6 +105,11 @@ $(function(){
 
     });
 
-
+    // refresh page and restart animation if the back button is pressed
+	window.onpageshow = function(event) {
+		if (event.persisted) {
+    		window.location.reload() 
+		}
+	};
 
 });
