@@ -49,7 +49,7 @@ $(function(){
 
   		   /* first hide and disable the button */
 			$(".btn-start").animate({opacity:0}, (delay*200),function(){
-			    $(this).animate({opacity:0}).prop("disabled", true);
+			  $(this).animate({opacity:0}).prop("disabled", true);
 			})
 	
 			/* show "skip" link */
@@ -59,17 +59,7 @@ $(function(){
 			function loop(delay) {
 			    $.each(items, function (i, elm) {
 			    	// sync the first transition with the button
-			    	// use callback function to center the story text
-			    	if (i == 0) {
-			    		$text.delay(delay*50).fadeOut(function() {
-			    			$(".intro-container").css("top", top[0] + "vh");
-			    		});
-			    	}	
-			    	else {
-			    		$text.delay(delay*1E3).fadeOut();	//1E3 == 1000
-			    	}
-			    
-			     	$text.delay(delay*400)	// delay transition between texts
+			     	$text.delay(1000)	// delay transition between texts
 			        $text.queue(function(){
 			            $text.html(items[i]);
 			            $text.dequeue();
